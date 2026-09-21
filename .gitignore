@@ -1,3 +1,4 @@
+# OS & IDE artifacts
 .DS_Store
 build/
 DerivedData/
@@ -5,3 +6,18 @@ DerivedData/
 xcuserdata/
 *.xcbkptlist
 *.xcworkspace/xcuserdata
+*.xcuserdatad/
+
+# Code Signing & Secrets protection
+*.cer
+*.p12
+*.key
+*.pem
+*.mobileprovision
+*.provisionprofile
+.env
+.env.*
+
+# Local agent scratch documents
+AGENT_BRIEFING.md
+scratch/

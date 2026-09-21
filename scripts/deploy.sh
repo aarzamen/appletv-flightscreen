@@ -12,7 +12,7 @@ DEVICE_INFO=$(xcrun devicectl list devices | grep -E "AppleTV|tvOS" | head -n 1 
 if [ -z "${DEVICE_INFO}" ]; then
     echo ""
     echo "⚠️  No Apple TV currently paired or connected."
-    echo "    Found on local Wi-Fi: 'Tv' at 192.168.1.134"
+    echo "    Make sure your Apple TV is powered on and connected to the same local Wi-Fi."
     echo ""
     echo "To complete pairing with your Apple TV:"
     echo "  1. On your Apple TV, go to: Settings ➔ Remotes and Devices ➔ Remote App and Devices"
