@@ -1,0 +1,32 @@
+name: FlightScreenTV
+options:
+  bundleIdPrefix: com.flightscreen
+  deploymentTarget:
+    tvOS: "17.0"
+
+settings:
+  base:
+    DEVELOPMENT_TEAM: "434HG698U6"
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.0"
+    TARGETED_DEVICE_FAMILY: "3"
+    PRODUCT_NAME: "FlightScreenTV"
+
+targets:
+  FlightScreenTV:
+    type: application
+    platform: tvOS
+    deploymentTarget: "17.0"
+    sources:
+      - FlightScreenTV
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.flightscreen.tvos
+        INFOPLIST_FILE: FlightScreenTV/Resources/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ENABLE_PREVIEWS: YES
+    frameworks:
+      - framework: SwiftUI.framework
+      - framework: MapKit.framework
+      - framework: Combine.framework
+      - framework: GameController.framework

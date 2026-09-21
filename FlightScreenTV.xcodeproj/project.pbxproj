@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F15341CB0AA6406762789B4 /* Aircraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DF7647D2449670CE98CF95 /* Aircraft.swift */; };
+		52634C9CFD5150B15973F585 /* TargetDetailHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F8BFB7954457F4C6ACC75C /* TargetDetailHUD.swift */; };
+		5C3D17B2DD46C21E6AA9BEF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24041538FD639595B69DF261 /* Assets.xcassets */; };
+		68E7F45128918819518E24ED /* FlightScreenTVApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C5F1AC6AA0E3C7CD42262 /* FlightScreenTVApp.swift */; };
+		71472501F82DB0E04242FB46 /* TopHUDBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA6E9E10E727E36B3CCC081 /* TopHUDBar.swift */; };
+		8BC0D07B68929484E4270CF5 /* RadarSweepOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277431161AA0597B3E271DB4 /* RadarSweepOverlay.swift */; };
+		925EE15027030A557ABC18D8 /* ToolbarControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBCE0054480F73B24760770 /* ToolbarControlsView.swift */; };
+		B68CE3B1FCAE35344D4AA607 /* AdsbService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9071D1909536BE6DDFAE5D8D /* AdsbService.swift */; };
+		B95013263D127A1F920BFDB0 /* RadarMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501708F92FF18ADD55D3BB9 /* RadarMapView.swift */; };
+		BABB2FE7642D8415EF7D3319 /* AircraftMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F4255BAE0879D41AB13DC /* AircraftMarkerView.swift */; };
+		CC29DFC78361AA32FB0FFE98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2E353F397BC35FA2EB131 /* ContentView.swift */; };
+		FBEBC265C9D75556CCB8E898 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D9104DE9E1A2497E2D344 /* Station.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		19F8BFB7954457F4C6ACC75C /* TargetDetailHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetDetailHUD.swift; sourceTree = "<group>"; };
+		24041538FD639595B69DF261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		277431161AA0597B3E271DB4 /* RadarSweepOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarSweepOverlay.swift; sourceTree = "<group>"; };
+		3A0D9104DE9E1A2497E2D344 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		5DA6E9E10E727E36B3CCC081 /* TopHUDBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHUDBar.swift; sourceTree = "<group>"; };
+		9071D1909536BE6DDFAE5D8D /* AdsbService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsbService.swift; sourceTree = "<group>"; };
+		B501708F92FF18ADD55D3BB9 /* RadarMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarMapView.swift; sourceTree = "<group>"; };
+		B59E1AC9CCC8BE8A3EAA17A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C97F4255BAE0879D41AB13DC /* AircraftMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftMarkerView.swift; sourceTree = "<group>"; };
+		D0DF7647D2449670CE98CF95 /* Aircraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aircraft.swift; sourceTree = "<group>"; };
+		D3C2E353F397BC35FA2EB131 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D745364C4CA5D4B288470504 /* FlightScreenTV.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FlightScreenTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB9C5F1AC6AA0E3C7CD42262 /* FlightScreenTVApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightScreenTVApp.swift; sourceTree = "<group>"; };
+		EFBCE0054480F73B24760770 /* ToolbarControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarControlsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2DB3E6AB9634871A65695494 = {
+			isa = PBXGroup;
+			children = (
+				34E38154287814A4E0ED5C71 /* FlightScreenTV */,
+				FBD3E43753716C681F92260D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		34E38154287814A4E0ED5C71 /* FlightScreenTV */ = {
+			isa = PBXGroup;
+			children = (
+				6957CFE250E7774B1CA76084 /* App */,
+				47DA1AF18556F792D37FC186 /* Models */,
+				DA3DAEF0F781694CE2BCDB7A /* Resources */,
+				9710EB7C111044C0AE9AB269 /* Services */,
+				77828911D6F1FDA570EE4CDA /* Views */,
+			);
+			path = FlightScreenTV;
+			sourceTree = "<group>";
+		};
+		47DA1AF18556F792D37FC186 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF7647D2449670CE98CF95 /* Aircraft.swift */,
+				3A0D9104DE9E1A2497E2D344 /* Station.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6957CFE250E7774B1CA76084 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DB9C5F1AC6AA0E3C7CD42262 /* FlightScreenTVApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		77828911D6F1FDA570EE4CDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C97F4255BAE0879D41AB13DC /* AircraftMarkerView.swift */,
+				D3C2E353F397BC35FA2EB131 /* ContentView.swift */,
+				B501708F92FF18ADD55D3BB9 /* RadarMapView.swift */,
+				277431161AA0597B3E271DB4 /* RadarSweepOverlay.swift */,
+				19F8BFB7954457F4C6ACC75C /* TargetDetailHUD.swift */,
+				EFBCE0054480F73B24760770 /* ToolbarControlsView.swift */,
+				5DA6E9E10E727E36B3CCC081 /* TopHUDBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9710EB7C111044C0AE9AB269 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9071D1909536BE6DDFAE5D8D /* AdsbService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DA3DAEF0F781694CE2BCDB7A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24041538FD639595B69DF261 /* Assets.xcassets */,
+				B59E1AC9CCC8BE8A3EAA17A6 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FBD3E43753716C681F92260D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D745364C4CA5D4B288470504 /* FlightScreenTV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6524AA61D70AF4BEDA555EBE /* FlightScreenTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44FB36903C379B98623F00C8 /* Build configuration list for PBXNativeTarget "FlightScreenTV" */;
+			buildPhases = (
+				98B3E0D0BC87DBE0E7190596 /* Sources */,
+				17B4439EB477A944B704A0B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlightScreenTV;
+			packageProductDependencies = (
+			);
+			productName = FlightScreenTV;
+			productReference = D745364C4CA5D4B288470504 /* FlightScreenTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		31435E233DF0431F32D44E88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					6524AA61D70AF4BEDA555EBE = {
+						DevelopmentTeam = 434HG698U6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 803431CE2D2581225D3655C4 /* Build configuration list for PBXProject "FlightScreenTV" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2DB3E6AB9634871A65695494;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FBD3E43753716C681F92260D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6524AA61D70AF4BEDA555EBE /* FlightScreenTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17B4439EB477A944B704A0B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C3D17B2DD46C21E6AA9BEF9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		98B3E0D0BC87DBE0E7190596 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68CE3B1FCAE35344D4AA607 /* AdsbService.swift in Sources */,
+				4F15341CB0AA6406762789B4 /* Aircraft.swift in Sources */,
+				BABB2FE7642D8415EF7D3319 /* AircraftMarkerView.swift in Sources */,
+				CC29DFC78361AA32FB0FFE98 /* ContentView.swift in Sources */,
+				68E7F45128918819518E24ED /* FlightScreenTVApp.swift in Sources */,
+				B95013263D127A1F920BFDB0 /* RadarMapView.swift in Sources */,
+				8BC0D07B68929484E4270CF5 /* RadarSweepOverlay.swift in Sources */,
+				FBEBC265C9D75556CCB8E898 /* Station.swift in Sources */,
+				52634C9CFD5150B15973F585 /* TargetDetailHUD.swift in Sources */,
+				925EE15027030A557ABC18D8 /* ToolbarControlsView.swift in Sources */,
+				71472501F82DB0E04242FB46 /* TopHUDBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		48AF78D1576D54897446267B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FlightScreenTV/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flightscreen.tvos;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Debug;
+		};
+		7229EE610CF7E666D184C72C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 434HG698U6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = FlightScreenTV;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Debug;
+		};
+		7527415D866D4DD31D50A765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 434HG698U6;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = FlightScreenTV;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Release;
+		};
+		D7E3EC559FEA92D3E30DBE3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FlightScreenTV/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flightscreen.tvos;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 17.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44FB36903C379B98623F00C8 /* Build configuration list for PBXNativeTarget "FlightScreenTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48AF78D1576D54897446267B /* Debug */,
+				D7E3EC559FEA92D3E30DBE3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		803431CE2D2581225D3655C4 /* Build configuration list for PBXProject "FlightScreenTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7229EE610CF7E666D184C72C /* Debug */,
+				7527415D866D4DD31D50A765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 31435E233DF0431F32D44E88 /* Project object */;
+}
