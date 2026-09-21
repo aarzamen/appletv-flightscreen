@@ -1,12 +1,12 @@
 name: FlightScreenTV
 options:
-  bundleIdPrefix: com.flightscreen
+  bundleIdPrefix: com.aarzamen
   deploymentTarget:
     tvOS: "17.0"
 
 settings:
   base:
-    DEVELOPMENT_TEAM: "434HG698U6"
+    DEVELOPMENT_TEAM: "XM6E4PUXTU"
     CODE_SIGN_STYLE: Automatic
     SWIFT_VERSION: "5.0"
     TARGETED_DEVICE_FAMILY: "3"
@@ -21,7 +21,7 @@ targets:
       - FlightScreenTV
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.flightscreen.tvos
+        PRODUCT_BUNDLE_IDENTIFIER: com.aarzamen.flightscreen.tvos
         INFOPLIST_FILE: FlightScreenTV/Resources/Info.plist
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ENABLE_PREVIEWS: YES

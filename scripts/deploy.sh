@@ -7,7 +7,7 @@ ROOT_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 cd "${ROOT_DIR}"
 
 echo "==> Scanning for connected Apple TV devices..."
-DEVICE_INFO=$(xcrun devicectl list devices --columns 'Platform,State,Model,Identifier,Name' | grep -i "tvOS" || true)
+DEVICE_INFO=$(xcrun devicectl list devices | grep -E "AppleTV|tvOS" | head -n 1 || true)
 
 if [ -z "${DEVICE_INFO}" ]; then
     echo ""
@@ -35,6 +35,7 @@ xcodebuild \
     -sdk appletvos \
     -destination "id=${DEVICE_ID}" \
     -allowProvisioningUpdates \
+    -allowProvisioningDeviceRegistration \
     build
 
 APP_PATH="${HOME}/Library/Developer/Xcode/DerivedData/FlightScreenTV-"*"/Build/Products/Debug-appletvos/FlightScreenTV.app"
@@ -49,6 +50,6 @@ echo "==> Installing FlightScreenTV to Apple TV..."
 xcrun devicectl device install app --device "${DEVICE_ID}" "${APP_DIR}"
 
 echo "==> Launching FlightScreenTV on Apple TV..."
-xcrun devicectl device process launch --device "${DEVICE_ID}" com.flightscreen.tvos
+xcrun devicectl device process launch --device "${DEVICE_ID}" com.aarzamen.flightscreen.tvos
 
 echo "✅ Successfully deployed and launched FlightScreen TV on your Apple TV!"

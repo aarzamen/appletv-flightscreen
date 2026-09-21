@@ -34,9 +34,9 @@ This project is a clean, native tvOS port of the live flight radar display from 
 ## 3. Developer Environment & Code Signing
 - **Xcode Version**: Xcode 26.6 (Build 17F113)
 - **SDK**: `appletvos26.5` / `appletvsimulator26.5`
-- **Developer Team ID**: `434HG698U6`
+- **Developer Team ID**: `XM6E4PUXTU`
 - **Developer Identity**: `Apple Development: Aaron Arzamendi (434HG698U6)`
-- **Bundle ID**: `com.flightscreen.tvos`
+- **Bundle ID**: `com.aarzamen.flightscreen.tvos`
 - **Xcode Project Generator**: `xcodegen` (installed at `/opt/homebrew/bin/xcodegen`)
 
 ---
@@ -46,9 +46,12 @@ This project is a clean, native tvOS port of the live flight radar display from 
 # Regenerate Xcode Project from project.yml
 ./scripts/generate-project.sh
 
-# Build project with xcodebuild
+# Build project for Simulator
 ./scripts/build.sh appletvsimulator "generic/platform=tvOS Simulator"
 
-# List connected Apple TV devices (paired via Xcode Devices window)
+# Deploy & launch directly on physical Apple TV over Wi-Fi
+./scripts/deploy.sh
+
+# List connected Apple TV devices
 xcrun devicectl list devices
 ```
