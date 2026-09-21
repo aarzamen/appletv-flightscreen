@@ -19,6 +19,7 @@
 		B95013263D127A1F920BFDB0 /* RadarMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B501708F92FF18ADD55D3BB9 /* RadarMapView.swift */; };
 		BABB2FE7642D8415EF7D3319 /* AircraftMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F4255BAE0879D41AB13DC /* AircraftMarkerView.swift */; };
 		CC29DFC78361AA32FB0FFE98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2E353F397BC35FA2EB131 /* ContentView.swift */; };
+		D5846A80A3751B4351783772 /* FlightScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD816DE58FA62D28EEB80C5 /* FlightScreenViewModel.swift */; };
 		FBEBC265C9D75556CCB8E898 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D9104DE9E1A2497E2D344 /* Station.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		277431161AA0597B3E271DB4 /* RadarSweepOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarSweepOverlay.swift; sourceTree = "<group>"; };
 		3A0D9104DE9E1A2497E2D344 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		5DA6E9E10E727E36B3CCC081 /* TopHUDBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHUDBar.swift; sourceTree = "<group>"; };
+		8AD816DE58FA62D28EEB80C5 /* FlightScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightScreenViewModel.swift; sourceTree = "<group>"; };
 		9071D1909536BE6DDFAE5D8D /* AdsbService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsbService.swift; sourceTree = "<group>"; };
 		A3CC0FF00F2087C3958EA48F /* SiriRemoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriRemoteManager.swift; sourceTree = "<group>"; };
 		B501708F92FF18ADD55D3BB9 /* RadarMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarMapView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				9071D1909536BE6DDFAE5D8D /* AdsbService.swift */,
+				8AD816DE58FA62D28EEB80C5 /* FlightScreenViewModel.swift */,
 				A3CC0FF00F2087C3958EA48F /* SiriRemoteManager.swift */,
 			);
 			path = Services;
@@ -194,6 +197,7 @@
 				BABB2FE7642D8415EF7D3319 /* AircraftMarkerView.swift in Sources */,
 				CC29DFC78361AA32FB0FFE98 /* ContentView.swift in Sources */,
 				68E7F45128918819518E24ED /* FlightScreenTVApp.swift in Sources */,
+				D5846A80A3751B4351783772 /* FlightScreenViewModel.swift in Sources */,
 				B95013263D127A1F920BFDB0 /* RadarMapView.swift in Sources */,
 				8BC0D07B68929484E4270CF5 /* RadarSweepOverlay.swift in Sources */,
 				3056241C3146F6993137856F /* SiriRemoteManager.swift in Sources */,

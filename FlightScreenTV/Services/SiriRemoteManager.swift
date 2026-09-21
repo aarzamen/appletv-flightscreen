@@ -36,7 +36,20 @@ public final class SiriRemoteManager: ObservableObject {
             micro.reportsAbsoluteDpadValues = false
             micro.dpad.valueChangedHandler = { [weak self] (_, x, y) in
                 guard abs(x) > 0.04 || abs(y) > 0.04 else { return }
-                DispatchQueue.main.async {
+                Task { @MainActor in
+                    self?.onPanDelta?(Double(x), Double(y))
+                }
+            }
+        } else if let extended = controller.extendedGamepad {
+            extended.leftThumbstick.valueChangedHandler = { [weak self] (_, x, y) in
+                guard abs(x) > 0.04 || abs(y) > 0.04 else { return }
+                Task { @MainActor in
+                    self?.onPanDelta?(Double(x), Double(y))
+                }
+            }
+            extended.dpad.valueChangedHandler = { [weak self] (_, x, y) in
+                guard abs(x) > 0.04 || abs(y) > 0.04 else { return }
+                Task { @MainActor in
                     self?.onPanDelta?(Double(x), Double(y))
                 }
             }

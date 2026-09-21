@@ -3,6 +3,7 @@ import SwiftUI
 public struct ToolbarControlsView: View {
     public let isToolbarActive: Bool
     public let isSatellite: Bool
+    public let selectedAircraft: Aircraft?
     public let onZoomIn: () -> Void
     public let onZoomOut: () -> Void
     public let onCenter: () -> Void
@@ -23,6 +24,7 @@ public struct ToolbarControlsView: View {
     public init(
         isToolbarActive: Bool,
         isSatellite: Bool,
+        selectedAircraft: Aircraft? = nil,
         onZoomIn: @escaping () -> Void,
         onZoomOut: @escaping () -> Void,
         onCenter: @escaping () -> Void,
@@ -32,6 +34,7 @@ public struct ToolbarControlsView: View {
     ) {
         self.isToolbarActive = isToolbarActive
         self.isSatellite = isSatellite
+        self.selectedAircraft = selectedAircraft
         self.onZoomIn = onZoomIn
         self.onZoomOut = onZoomOut
         self.onCenter = onCenter
@@ -43,22 +46,22 @@ public struct ToolbarControlsView: View {
     public var body: some View {
         HStack(alignment: .bottom) {
             // Instructions Pill
-            HStack(spacing: 16) {
+            HStack(spacing: 14) {
                 if isToolbarActive {
                     Text("● MENU ACTIVE")
-                        .font(.system(size: 13, weight: .bold))
+                        .font(.system(size: 12, weight: .bold))
                         .foregroundColor(Color(red: 0.0, green: 0.9, blue: 0.46))
                     KeyBadgeItem(badge: "◀ ▶", action: "Navigate")
-                    KeyBadgeItem(badge: "SELECT", action: "Choose")
-                    KeyBadgeItem(badge: "BACK / ▲", action: "Map Mode")
+                    KeyBadgeItem(badge: "SELECT", action: "Execute")
+                    KeyBadgeItem(badge: "▲ / BACK", action: "Map Mode")
                 } else {
-                    KeyBadgeItem(badge: "CLICKPAD", action: "Pan Map")
-                    KeyBadgeItem(badge: "SELECT", action: "Target Plane")
-                    KeyBadgeItem(badge: "HOLD SELECT", action: "Menu")
-                    KeyBadgeItem(badge: "BACK", action: "Deselect")
+                    KeyBadgeItem(badge: "CLICKPAD", action: "Pan")
+                    KeyBadgeItem(badge: "SELECT", action: "Target")
+                    KeyBadgeItem(badge: "⏯ / HOLD", action: "Menu")
+                    KeyBadgeItem(badge: "BACK", action: "Clear")
                 }
             }
-            .padding(.horizontal, 18)
+            .padding(.horizontal, 16)
             .padding(.vertical, 10)
             .background(.ultraThinMaterial)
             .background(Color(red: 0.04, green: 0.06, blue: 0.10).opacity(0.85))
@@ -73,45 +76,35 @@ public struct ToolbarControlsView: View {
             
             // Buttons Row
             HStack(spacing: 10) {
-                TVToolbarButton(
+                makeToolbarButton(
                     title: "+ Zoom",
-                    isFocused: focusedButton == .zoomIn,
+                    target: .zoomIn,
                     action: onZoomIn
                 )
-                .focused($focusedButton, equals: .zoomIn)
-                .focusable(isToolbarActive)
                 
-                TVToolbarButton(
+                makeToolbarButton(
                     title: "− Zoom",
-                    isFocused: focusedButton == .zoomOut,
+                    target: .zoomOut,
                     action: onZoomOut
                 )
-                .focused($focusedButton, equals: .zoomOut)
-                .focusable(isToolbarActive)
                 
-                TVToolbarButton(
-                    title: "🎯 Center",
-                    isFocused: focusedButton == .center,
+                makeToolbarButton(
+                    title: selectedAircraft != nil ? "🎯 Target" : "🎯 Station",
+                    target: .center,
                     action: onCenter
                 )
-                .focused($focusedButton, equals: .center)
-                .focusable(isToolbarActive)
                 
-                TVToolbarButton(
-                    title: isSatellite ? "🛰️ Satellite" : "🗺️ Dark Map",
-                    isFocused: focusedButton == .mapToggle,
+                makeToolbarButton(
+                    title: isSatellite ? "🗺️ Dark Map" : "🛰️ Satellite",
+                    target: .mapToggle,
                     action: onToggleMapStyle
                 )
-                .focused($focusedButton, equals: .mapToggle)
-                .focusable(isToolbarActive)
                 
-                TVToolbarButton(
+                makeToolbarButton(
                     title: "📍 Station",
-                    isFocused: focusedButton == .station,
+                    target: .station,
                     action: onCycleStation
                 )
-                .focused($focusedButton, equals: .station)
-                .focusable(isToolbarActive)
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
@@ -139,6 +132,32 @@ public struct ToolbarControlsView: View {
             }
         }
     }
+    
+    @ViewBuilder
+    private func makeToolbarButton(
+        title: String,
+        target: ToolbarButton,
+        action: @escaping () -> Void
+    ) -> some View {
+        let isFocused = (focusedButton == target)
+        Button(action: action) {
+            Text(title)
+                .font(.system(size: 13, weight: isFocused ? .heavy : .semibold))
+                .foregroundColor(isFocused ? Color(red: 0.04, green: 0.06, blue: 0.10) : .white)
+                .padding(.horizontal, 14)
+                .padding(.vertical, 8)
+                .background(isFocused ? Color(red: 0.0, green: 0.9, blue: 0.46) : Color(red: 0.12, green: 0.16, blue: 0.24))
+                .cornerRadius(8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(isFocused ? Color.white : Color(red: 0.2, green: 0.25, blue: 0.35), lineWidth: 1)
+                )
+                .shadow(color: isFocused ? Color(red: 0.0, green: 0.9, blue: 0.46).opacity(0.8) : Color.clear, radius: 14)
+        }
+        .buttonStyle(ToolbarButtonStyle(isFocused: isFocused))
+        .focused($focusedButton, equals: target)
+        .focusable(isToolbarActive)
+    }
 }
 
 private struct KeyBadgeItem: View {
@@ -157,34 +176,19 @@ private struct KeyBadgeItem: View {
                 .overlay(RoundedRectangle(cornerRadius: 4).stroke(Color(red: 0.25, green: 0.32, blue: 0.42), lineWidth: 1))
             
             Text(action)
-                .font(.system(size: 13, weight: .medium))
+                .font(.system(size: 12, weight: .medium))
                 .foregroundColor(Color(red: 0.8, green: 0.85, blue: 0.9))
         }
     }
 }
 
-private struct TVToolbarButton: View {
-    let title: String
+private struct ToolbarButtonStyle: ButtonStyle {
     let isFocused: Bool
-    let action: () -> Void
     
-    var body: some View {
-        Button(action: action) {
-            Text(title)
-                .font(.system(size: 13, weight: isFocused ? .heavy : .semibold))
-                .foregroundColor(isFocused ? Color(red: 0.04, green: 0.06, blue: 0.10) : .white)
-                .padding(.horizontal, 14)
-                .padding(.vertical, 8)
-                .background(isFocused ? Color(red: 0.0, green: 0.9, blue: 0.46) : Color(red: 0.12, green: 0.16, blue: 0.24))
-                .cornerRadius(8)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(isFocused ? Color.white : Color(red: 0.2, green: 0.25, blue: 0.35), lineWidth: 1)
-                )
-                .scaleEffect(isFocused ? 1.12 : 1.0)
-                .shadow(color: isFocused ? Color(red: 0.0, green: 0.9, blue: 0.46).opacity(0.8) : Color.clear, radius: 14)
-                .animation(.easeInOut(duration: 0.15), value: isFocused)
-        }
-        .buttonStyle(.plain)
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.96 : (isFocused ? 1.12 : 1.0))
+            .animation(.spring(response: 0.2, dampingFraction: 0.7), value: configuration.isPressed)
+            .animation(.easeInOut(duration: 0.15), value: isFocused)
     }
 }

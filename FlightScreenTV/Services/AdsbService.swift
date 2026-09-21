@@ -82,9 +82,12 @@ public final class AdsbService: ObservableObject {
                 return
             }
             
-            if let json = try JSONSerialization.jsonObject(with: data) as? [String: Any],
-               let acList = json["ac"] as? [[String: Any]] {
-                let parsed: [Aircraft] = acList.compactMap { dict in
+            let parsed = await Task.detached(priority: .userInitiated) { () -> [Aircraft] in
+                guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+                      let acList = json["ac"] as? [[String: Any]] else {
+                    return []
+                }
+                return acList.compactMap { dict in
                     guard let lat = (dict["lat"] as? NSNumber)?.doubleValue,
                           let lon = (dict["lon"] as? NSNumber)?.doubleValue else {
                         return nil
@@ -122,15 +125,15 @@ public final class AdsbService: ObservableObject {
                     )
                 }
                 .sorted { ($0.distanceNm ?? 999.0) < ($1.distanceNm ?? 999.0) }
-                
-                self.aircraft = parsed
-                self.lastFetchSuccess = true
-                self.statusMessage = "LIVE ADS-B"
-                
-                // Refresh targeted aircraft if still in feed
-                if let selected = self.selectedAircraft {
-                    self.selectedAircraft = parsed.first(where: { $0.hex == selected.hex })
-                }
+            }.value
+            
+            self.aircraft = parsed
+            self.lastFetchSuccess = true
+            self.statusMessage = "LIVE ADS-B"
+            
+            // Refresh targeted aircraft if still in feed
+            if let selected = self.selectedAircraft {
+                self.selectedAircraft = parsed.first(where: { $0.hex == selected.hex })
             }
         } catch {
             self.lastFetchSuccess = false
