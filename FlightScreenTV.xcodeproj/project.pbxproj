@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3056241C3146F6993137856F /* SiriRemoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CC0FF00F2087C3958EA48F /* SiriRemoteManager.swift */; };
 		4F15341CB0AA6406762789B4 /* Aircraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DF7647D2449670CE98CF95 /* Aircraft.swift */; };
 		52634C9CFD5150B15973F585 /* TargetDetailHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F8BFB7954457F4C6ACC75C /* TargetDetailHUD.swift */; };
 		5C3D17B2DD46C21E6AA9BEF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24041538FD639595B69DF261 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		3A0D9104DE9E1A2497E2D344 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		5DA6E9E10E727E36B3CCC081 /* TopHUDBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHUDBar.swift; sourceTree = "<group>"; };
 		9071D1909536BE6DDFAE5D8D /* AdsbService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsbService.swift; sourceTree = "<group>"; };
+		A3CC0FF00F2087C3958EA48F /* SiriRemoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriRemoteManager.swift; sourceTree = "<group>"; };
 		B501708F92FF18ADD55D3BB9 /* RadarMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarMapView.swift; sourceTree = "<group>"; };
 		B59E1AC9CCC8BE8A3EAA17A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C97F4255BAE0879D41AB13DC /* AircraftMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircraftMarkerView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				9071D1909536BE6DDFAE5D8D /* AdsbService.swift */,
+				A3CC0FF00F2087C3958EA48F /* SiriRemoteManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				68E7F45128918819518E24ED /* FlightScreenTVApp.swift in Sources */,
 				B95013263D127A1F920BFDB0 /* RadarMapView.swift in Sources */,
 				8BC0D07B68929484E4270CF5 /* RadarSweepOverlay.swift in Sources */,
+				3056241C3146F6993137856F /* SiriRemoteManager.swift in Sources */,
 				FBEBC265C9D75556CCB8E898 /* Station.swift in Sources */,
 				52634C9CFD5150B15973F585 /* TargetDetailHUD.swift in Sources */,
 				925EE15027030A557ABC18D8 /* ToolbarControlsView.swift in Sources */,

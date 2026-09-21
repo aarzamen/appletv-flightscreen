@@ -17,8 +17,8 @@ public struct AircraftMarkerView: View {
                 ZStack {
                     if isSelected {
                         Circle()
-                            .fill(Color(red: 0.0, green: 0.9, blue: 0.46).opacity(0.3))
-                            .frame(width: 44, height: 44)
+                            .fill(Color(red: 0.0, green: 0.9, blue: 0.46).opacity(0.35))
+                            .frame(width: 48, height: 48)
                     }
                     
                     Image(systemName: "airplane")
@@ -31,22 +31,25 @@ public struct AircraftMarkerView: View {
                 // Label Badge
                 Text("\(aircraft.callsign) \(aircraft.flightLevelString)")
                     .font(.system(size: 11, weight: .bold, design: .monospaced))
-                    .foregroundColor(isSelected ? Color(red: 0.0, green: 0.9, blue: 0.46) : Color(red: 0.9, green: 0.95, blue: 1.0))
+                    .foregroundColor(isSelected ? Color(red: 0.0, green: 0.9, blue: 0.46) : (aircraft.isEmergency ? Color(red: 1.0, green: 0.2, blue: 0.2) : Color(red: 0.9, green: 0.95, blue: 1.0)))
                     .padding(.horizontal, 6)
                     .padding(.vertical, 2)
-                    .background(Color(red: 0.04, green: 0.06, blue: 0.10).opacity(0.88))
+                    .background(Color(red: 0.04, green: 0.06, blue: 0.10).opacity(0.92))
                     .cornerRadius(4)
                     .overlay(
                         RoundedRectangle(cornerRadius: 4)
-                            .stroke(isSelected ? Color(red: 0.0, green: 0.9, blue: 0.46) : Color(red: 0.25, green: 0.32, blue: 0.42), lineWidth: 1)
+                            .stroke(isSelected ? Color(red: 0.0, green: 0.9, blue: 0.46) : (aircraft.isEmergency ? Color(red: 1.0, green: 0.2, blue: 0.2) : Color(red: 0.25, green: 0.32, blue: 0.42)), lineWidth: isSelected ? 1.5 : 1)
                     )
             }
         }
         .buttonStyle(.plain)
+        .focusable(false)
     }
     
     private var iconColor: Color {
-        if isSelected {
+        if aircraft.isEmergency {
+            return Color(red: 1.0, green: 0.25, blue: 0.25)
+        } else if isSelected {
             return Color(red: 0.0, green: 0.9, blue: 0.46)
         } else if aircraft.isHigh {
             return Color(red: 0.38, green: 0.65, blue: 0.98)

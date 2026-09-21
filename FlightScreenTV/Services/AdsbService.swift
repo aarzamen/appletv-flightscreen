@@ -91,6 +91,7 @@ public final class AdsbService: ObservableObject {
                     }
                     let hex = (dict["hex"] as? String) ?? ""
                     let callsign = (dict["flight"] as? String) ?? (dict["r"] as? String) ?? hex
+                    let reg = (dict["r"] as? String) ?? ""
                     let type = (dict["t"] as? String) ?? "AIRCRAFT"
                     let altBaro = dict["alt_baro"]
                     var alt = 0
@@ -101,20 +102,26 @@ public final class AdsbService: ObservableObject {
                     }
                     let gs = (dict["gs"] as? NSNumber)?.doubleValue ?? 0.0
                     let track = (dict["track"] as? NSNumber)?.doubleValue ?? 0.0
+                    let baroRate = (dict["baro_rate"] as? NSNumber)?.intValue ?? 0
                     let squawk = (dict["squawk"] as? String) ?? "—"
+                    let dst = (dict["dst"] as? NSNumber)?.doubleValue
                     
                     return Aircraft(
                         hex: hex,
                         callsign: callsign,
+                        registration: reg,
                         type: type,
                         latitude: lat,
                         longitude: lon,
                         altitude: alt,
                         groundSpeed: gs,
                         track: track,
-                        squawk: squawk
+                        verticalSpeed: baroRate,
+                        squawk: squawk,
+                        distanceNm: dst
                     )
                 }
+                .sorted { ($0.distanceNm ?? 999.0) < ($1.distanceNm ?? 999.0) }
                 
                 self.aircraft = parsed
                 self.lastFetchSuccess = true

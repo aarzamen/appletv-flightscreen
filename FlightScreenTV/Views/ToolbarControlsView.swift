@@ -8,6 +8,7 @@ public struct ToolbarControlsView: View {
     public let onCenter: () -> Void
     public let onToggleMapStyle: () -> Void
     public let onCycleStation: () -> Void
+    public let onExitToolbar: () -> Void
     
     @FocusState private var focusedButton: ToolbarButton?
     
@@ -26,7 +27,8 @@ public struct ToolbarControlsView: View {
         onZoomOut: @escaping () -> Void,
         onCenter: @escaping () -> Void,
         onToggleMapStyle: @escaping () -> Void,
-        onCycleStation: @escaping () -> Void
+        onCycleStation: @escaping () -> Void,
+        onExitToolbar: @escaping () -> Void = {}
     ) {
         self.isToolbarActive = isToolbarActive
         self.isSatellite = isSatellite
@@ -35,6 +37,7 @@ public struct ToolbarControlsView: View {
         self.onCenter = onCenter
         self.onToggleMapStyle = onToggleMapStyle
         self.onCycleStation = onCycleStation
+        self.onExitToolbar = onExitToolbar
     }
     
     public var body: some View {
@@ -57,7 +60,8 @@ public struct ToolbarControlsView: View {
             }
             .padding(.horizontal, 18)
             .padding(.vertical, 10)
-            .background(Color(red: 0.04, green: 0.06, blue: 0.10).opacity(0.88))
+            .background(.ultraThinMaterial)
+            .background(Color(red: 0.04, green: 0.06, blue: 0.10).opacity(0.85))
             .cornerRadius(12)
             .overlay(
                 RoundedRectangle(cornerRadius: 12)
@@ -75,6 +79,7 @@ public struct ToolbarControlsView: View {
                     action: onZoomIn
                 )
                 .focused($focusedButton, equals: .zoomIn)
+                .focusable(isToolbarActive)
                 
                 TVToolbarButton(
                     title: "− Zoom",
@@ -82,6 +87,7 @@ public struct ToolbarControlsView: View {
                     action: onZoomOut
                 )
                 .focused($focusedButton, equals: .zoomOut)
+                .focusable(isToolbarActive)
                 
                 TVToolbarButton(
                     title: "🎯 Center",
@@ -89,6 +95,7 @@ public struct ToolbarControlsView: View {
                     action: onCenter
                 )
                 .focused($focusedButton, equals: .center)
+                .focusable(isToolbarActive)
                 
                 TVToolbarButton(
                     title: isSatellite ? "🛰️ Satellite" : "🗺️ Dark Map",
@@ -96,6 +103,7 @@ public struct ToolbarControlsView: View {
                     action: onToggleMapStyle
                 )
                 .focused($focusedButton, equals: .mapToggle)
+                .focusable(isToolbarActive)
                 
                 TVToolbarButton(
                     title: "📍 Station",
@@ -103,10 +111,12 @@ public struct ToolbarControlsView: View {
                     action: onCycleStation
                 )
                 .focused($focusedButton, equals: .station)
+                .focusable(isToolbarActive)
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
-            .background(isToolbarActive ? Color(red: 0.06, green: 0.09, blue: 0.16).opacity(0.97) : Color(red: 0.04, green: 0.06, blue: 0.10).opacity(0.88))
+            .background(.ultraThinMaterial)
+            .background(isToolbarActive ? Color(red: 0.06, green: 0.09, blue: 0.16).opacity(0.97) : Color(red: 0.04, green: 0.06, blue: 0.10).opacity(0.85))
             .cornerRadius(14)
             .overlay(
                 RoundedRectangle(cornerRadius: 14)
@@ -116,9 +126,16 @@ public struct ToolbarControlsView: View {
         }
         .padding(.horizontal, 48)
         .padding(.bottom, 32)
+        .onMoveCommand { direction in
+            if isToolbarActive && direction == .up {
+                onExitToolbar()
+            }
+        }
         .onChange(of: isToolbarActive) { active in
-            if active && focusedButton == nil {
+            if active {
                 focusedButton = .zoomIn
+            } else {
+                focusedButton = nil
             }
         }
     }

@@ -54,7 +54,8 @@ public struct TopHUDBar: View {
             }
             .padding(.horizontal, 18)
             .padding(.vertical, 12)
-            .background(Color(red: 0.04, green: 0.06, blue: 0.10).opacity(0.88))
+            .background(.ultraThinMaterial)
+            .background(Color(red: 0.04, green: 0.06, blue: 0.10).opacity(0.85))
             .cornerRadius(14)
             .overlay(
                 RoundedRectangle(cornerRadius: 14)
@@ -81,7 +82,8 @@ public struct TopHUDBar: View {
             }
             .padding(.horizontal, 20)
             .padding(.vertical, 12)
-            .background(Color(red: 0.04, green: 0.06, blue: 0.10).opacity(0.88))
+            .background(.ultraThinMaterial)
+            .background(Color(red: 0.04, green: 0.06, blue: 0.10).opacity(0.85))
             .cornerRadius(14)
             .overlay(
                 RoundedRectangle(cornerRadius: 14)
