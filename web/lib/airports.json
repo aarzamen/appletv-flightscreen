@@ -1,0 +1,536 @@
+[
+  {
+    "id": "KPOC",
+    "name": "Brackett Field",
+    "city": "La Verne",
+    "lat": 34.0916716,
+    "lon": -117.7817899,
+    "elevation": 1013.9,
+    "awcId": "KPOC",
+    "aliases": [
+      "POC",
+      "Brackett Fld"
+    ]
+  },
+  {
+    "id": "KCCB",
+    "name": "Cable",
+    "city": "Upland",
+    "lat": 34.1116143,
+    "lon": -117.6874004,
+    "elevation": 1443.5,
+    "awcId": "KCCB",
+    "aliases": [
+      "CCB"
+    ]
+  },
+  {
+    "id": "KONT",
+    "name": "Ontario International",
+    "city": "Ontario",
+    "lat": 34.0560191,
+    "lon": -117.6011996,
+    "elevation": 944.1,
+    "awcId": "KONT",
+    "aliases": [
+      "ONT",
+      "Ontario Intl"
+    ]
+  },
+  {
+    "id": "KCNO",
+    "name": "Chino",
+    "city": "Chino",
+    "lat": 33.9747842,
+    "lon": -117.6364949,
+    "elevation": 650,
+    "awcId": "KCNO",
+    "aliases": [
+      "CNO"
+    ]
+  },
+  {
+    "id": "KEMT",
+    "name": "San Gabriel Valley",
+    "city": "El Monte",
+    "lat": 34.0860138,
+    "lon": -118.0348574,
+    "elevation": 295.6,
+    "awcId": "KEMT",
+    "aliases": [
+      "EMT"
+    ]
+  },
+  {
+    "id": "KAJO",
+    "name": "Corona Municipal",
+    "city": "Corona",
+    "lat": 33.897659,
+    "lon": -117.6024518,
+    "elevation": 533,
+    "awcId": "KAJO",
+    "aliases": [
+      "AJO",
+      "Corona Muni"
+    ]
+  },
+  {
+    "id": "KFUL",
+    "name": "Fullerton Municipal",
+    "city": "Fullerton",
+    "lat": 33.872019,
+    "lon": -117.9797963,
+    "elevation": 96,
+    "awcId": "KFUL",
+    "aliases": [
+      "FUL",
+      "Fullerton Muni"
+    ]
+  },
+  {
+    "id": "KRAL",
+    "name": "Riverside",
+    "city": "Riverside",
+    "lat": 33.9518938,
+    "lon": -117.4451232,
+    "elevation": 818.9,
+    "awcId": "KRAL",
+    "aliases": [
+      "RAL"
+    ]
+  },
+  {
+    "id": "KLGB",
+    "name": "Long Beach (Daugherty Field)",
+    "city": "Long Beach",
+    "lat": 33.8179346,
+    "lon": -118.1519027,
+    "elevation": 60.4,
+    "awcId": "KLGB",
+    "aliases": [
+      "LGB",
+      "Long Beach (Daugherty Fld)"
+    ]
+  },
+  {
+    "id": "KSNA",
+    "name": "John Wayne/Orange County",
+    "city": "Santa Ana",
+    "lat": 33.6756668,
+    "lon": -117.8682451,
+    "elevation": 55.9,
+    "awcId": "KSNA",
+    "aliases": [
+      "SNA"
+    ]
+  },
+  {
+    "id": "KSBD",
+    "name": "San Bernardino International",
+    "city": "San Bernardino",
+    "lat": 34.095366,
+    "lon": -117.2349009,
+    "elevation": 1159.3,
+    "awcId": "KSBD",
+    "aliases": [
+      "SBD",
+      "San Bernardino Intl"
+    ]
+  },
+  {
+    "id": "KHHR",
+    "name": "Jack Northrop Field/Hawthorne Municipal",
+    "city": "Hawthorne",
+    "lat": 33.9228659,
+    "lon": -118.3350955,
+    "elevation": 65.9,
+    "awcId": "KHHR",
+    "aliases": [
+      "HHR",
+      "Jack Northrop Fld/Hawthorne Muni"
+    ]
+  },
+  {
+    "id": "KBUR",
+    "name": "Hollywood Burbank",
+    "city": "Burbank",
+    "lat": 34.2006993,
+    "lon": -118.3586789,
+    "elevation": 778,
+    "awcId": "KBUR",
+    "aliases": [
+      "BUR"
+    ]
+  },
+  {
+    "id": "KLAX",
+    "name": "Los Angeles International",
+    "city": "Los Angeles",
+    "lat": 33.9425012,
+    "lon": -118.4080608,
+    "elevation": 127.8,
+    "awcId": "KLAX",
+    "aliases": [
+      "LAX",
+      "Los Angeles Intl"
+    ]
+  },
+  {
+    "id": "KTOA",
+    "name": "Zamperini Field",
+    "city": "Torrance",
+    "lat": 33.8033877,
+    "lon": -118.3396198,
+    "elevation": 103.2,
+    "awcId": "KTOA",
+    "aliases": [
+      "TOA",
+      "Zamperini Fld"
+    ]
+  },
+  {
+    "id": "KWHP",
+    "name": "Whiteman",
+    "city": "Los Angeles",
+    "lat": 34.2593301,
+    "lon": -118.4134453,
+    "elevation": 1003,
+    "awcId": "KWHP",
+    "aliases": [
+      "WHP"
+    ]
+  },
+  {
+    "id": "KSMO",
+    "name": "Santa Monica Municipal",
+    "city": "Santa Monica",
+    "lat": 34.0158268,
+    "lon": -118.4513183,
+    "elevation": 169.8,
+    "awcId": "KSMO",
+    "aliases": [
+      "SMO",
+      "Santa Monica Muni"
+    ]
+  },
+  {
+    "id": "KVNY",
+    "name": "Van Nuys",
+    "city": "Van Nuys",
+    "lat": 34.2098104,
+    "lon": -118.4899845,
+    "elevation": 802.1,
+    "awcId": "KVNY",
+    "aliases": [
+      "VNY"
+    ]
+  },
+  {
+    "id": "L70",
+    "name": "Agua Dulce",
+    "city": "Agua Dulce",
+    "lat": 34.5035197,
+    "lon": -118.3131694,
+    "elevation": 2633,
+    "awcId": null,
+    "aliases": []
+  },
+  {
+    "id": "KVCV",
+    "name": "Southern California Logistics",
+    "city": "Victorville",
+    "lat": 34.5955311,
+    "lon": -117.3826743,
+    "elevation": 2885.3,
+    "awcId": "KVCV",
+    "aliases": [
+      "VCV"
+    ]
+  },
+  {
+    "id": "F70",
+    "name": "French Valley",
+    "city": "Murrieta / Temecula",
+    "lat": 33.5741839,
+    "lon": -117.1284852,
+    "elevation": 1349.5,
+    "awcId": "KF70",
+    "aliases": [
+      "KF70"
+    ]
+  },
+  {
+    "id": "KHMT",
+    "name": "Hemet-Ryan",
+    "city": "Hemet",
+    "lat": 33.7340327,
+    "lon": -117.0223175,
+    "elevation": 1514.8,
+    "awcId": "KHMT",
+    "aliases": [
+      "HMT"
+    ]
+  },
+  {
+    "id": "KWJF",
+    "name": "General William J. Fox Airfield",
+    "city": "Lancaster",
+    "lat": 34.7410605,
+    "lon": -118.2186511,
+    "elevation": 2350.7,
+    "awcId": "KWJF",
+    "aliases": [
+      "WJF",
+      "General Wm J Fox Airfield"
+    ]
+  },
+  {
+    "id": "L35",
+    "name": "Big Bear City",
+    "city": "Big Bear City",
+    "lat": 34.2637827,
+    "lon": -116.8560397,
+    "elevation": 6752.4,
+    "awcId": "KL35",
+    "aliases": [
+      "KL35"
+    ]
+  },
+  {
+    "id": "KAVX",
+    "name": "Catalina",
+    "city": "Avalon",
+    "lat": 33.405002,
+    "lon": -118.4157816,
+    "elevation": 1602,
+    "awcId": "KAVX",
+    "aliases": [
+      "AVX"
+    ]
+  },
+  {
+    "id": "KCRQ",
+    "name": "McClellan-Palomar",
+    "city": "Carlsbad",
+    "lat": 33.1282548,
+    "lon": -117.2800953,
+    "elevation": 330.5,
+    "awcId": "KCRQ",
+    "aliases": [
+      "CRQ",
+      "Mc Clellan-Palomar"
+    ]
+  },
+  {
+    "id": "KPSP",
+    "name": "Palm Springs International",
+    "city": "Palm Springs",
+    "lat": 33.8296746,
+    "lon": -116.506706,
+    "elevation": 476.6,
+    "awcId": "KPSP",
+    "aliases": [
+      "PSP",
+      "Palm Springs Intl"
+    ]
+  },
+  {
+    "id": "KCMA",
+    "name": "Camarillo",
+    "city": "Camarillo",
+    "lat": 34.2137632,
+    "lon": -119.0943665,
+    "elevation": 76.8,
+    "awcId": "KCMA",
+    "aliases": [
+      "CMA"
+    ]
+  },
+  {
+    "id": "L94",
+    "name": "Mountain Valley",
+    "city": "Tehachapi",
+    "lat": 35.1010827,
+    "lon": -118.4231515,
+    "elevation": 4220,
+    "awcId": null,
+    "aliases": []
+  },
+  {
+    "id": "KMYF",
+    "name": "Montgomery-Gibbs Executive",
+    "city": "San Diego",
+    "lat": 32.815727,
+    "lon": -117.1395675,
+    "elevation": 427.3,
+    "awcId": "KMYF",
+    "aliases": [
+      "MYF",
+      "Montgomery-Gibbs Exec"
+    ]
+  },
+  {
+    "id": "KTRM",
+    "name": "Jacqueline Cochran Regional",
+    "city": "Palm Springs",
+    "lat": 33.6266755,
+    "lon": -116.1596662,
+    "elevation": -114.4,
+    "awcId": "KTRM",
+    "aliases": [
+      "TRM",
+      "Jacqueline Cochran Rgnl"
+    ]
+  },
+  {
+    "id": "KSAN",
+    "name": "San Diego International",
+    "city": "San Diego",
+    "lat": 32.7335675,
+    "lon": -117.1896752,
+    "elevation": 16.8,
+    "awcId": "KSAN",
+    "aliases": [
+      "SAN",
+      "San Diego Intl"
+    ]
+  },
+  {
+    "id": "KSBA",
+    "name": "Santa Barbara Municipal",
+    "city": "Santa Barbara",
+    "lat": 34.4261965,
+    "lon": -119.8415053,
+    "elevation": 13.5,
+    "awcId": "KSBA",
+    "aliases": [
+      "SBA",
+      "Santa Barbara Muni"
+    ]
+  },
+  {
+    "id": "KHND",
+    "name": "Henderson Executive",
+    "city": "Las Vegas",
+    "lat": 35.9728603,
+    "lon": -115.1343965,
+    "elevation": 2491.4,
+    "awcId": "KHND",
+    "aliases": [
+      "HND",
+      "Henderson Exec"
+    ]
+  },
+  {
+    "id": "KLAS",
+    "name": "Harry Reid International",
+    "city": "Las Vegas",
+    "lat": 36.080348,
+    "lon": -115.1524604,
+    "elevation": 2183.1,
+    "awcId": "KLAS",
+    "aliases": [
+      "LAS",
+      "Harry Reid Intl"
+    ]
+  },
+  {
+    "id": "KSJC",
+    "name": "Mineta San Jose International",
+    "city": "San Jose",
+    "lat": 37.3629997,
+    "lon": -121.9286337,
+    "elevation": 62.3,
+    "awcId": "KSJC",
+    "aliases": [
+      "SJC",
+      "Mineta San Jose Intl"
+    ]
+  },
+  {
+    "id": "KPHX",
+    "name": "Phoenix Sky Harbor International",
+    "city": "Phoenix",
+    "lat": 33.4342829,
+    "lon": -112.0115943,
+    "elevation": 1134.8,
+    "awcId": "KPHX",
+    "aliases": [
+      "PHX",
+      "Phoenix Sky Harbor Intl"
+    ]
+  },
+  {
+    "id": "KPAO",
+    "name": "Palo Alto",
+    "city": "Palo Alto",
+    "lat": 37.4611263,
+    "lon": -122.1150598,
+    "elevation": 6.7,
+    "awcId": "KPAO",
+    "aliases": [
+      "PAO"
+    ]
+  },
+  {
+    "id": "KSDL",
+    "name": "Scottsdale",
+    "city": "Scottsdale",
+    "lat": 33.622886,
+    "lon": -111.9105418,
+    "elevation": 1510.1,
+    "awcId": "KSDL",
+    "aliases": [
+      "SDL"
+    ]
+  },
+  {
+    "id": "KSQL",
+    "name": "San Carlos",
+    "city": "San Carlos",
+    "lat": 37.511866,
+    "lon": -122.2495443,
+    "elevation": 5.5,
+    "awcId": "KSQL",
+    "aliases": [
+      "SQL"
+    ]
+  },
+  {
+    "id": "KOXR",
+    "name": "Oxnard",
+    "city": "Oxnard",
+    "lat": 34.2008118,
+    "lon": -119.2072387,
+    "elevation": 44.8,
+    "awcId": "KOXR",
+    "aliases": [
+      "OXR"
+    ]
+  },
+  {
+    "id": "KSZP",
+    "name": "Santa Paula",
+    "city": "Santa Paula",
+    "lat": 34.3470225,
+    "lon": -119.061629,
+    "elevation": 250,
+    "awcId": "KSZP",
+    "aliases": [
+      "SZP"
+    ]
+  },
+  {
+    "id": "KSEE",
+    "name": "Gillespie Field",
+    "city": "San Diego / El Cajon",
+    "lat": 32.826227,
+    "lon": -116.9724563,
+    "elevation": 387.5,
+    "awcId": "KSEE",
+    "aliases": [
+      "SEE",
+      "Gillespie Fld"
+    ]
+  }
+]

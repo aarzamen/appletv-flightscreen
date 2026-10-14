@@ -1,0 +1,24 @@
+{
+  "title": "FAA Airports",
+  "url": "https://services6.arcgis.com/ssFJjBXIUyZDrSYZ/arcgis/rest/services/US_Airport/FeatureServer",
+  "layerUrl": "https://services6.arcgis.com/ssFJjBXIUyZDrSYZ/arcgis/rest/services/US_Airport/FeatureServer/0",
+  "retrievedAt": "2026-09-05",
+  "effectiveFrom": "2026-09-03T09:01:00Z",
+  "effectiveTo": "2026-10-29T09:01:00Z",
+  "copyright": "Federal Aviation Administration, Air Traffic Organization, Mission Support Services, Aeronautical Information Services.",
+  "fields": {
+    "id": "ICAO_ID when supplied, otherwise IDENT",
+    "name": "NAME; common FAA abbreviations expanded for display",
+    "city": "SERVCITY; title case",
+    "lat": "geometry.y in EPSG:4326",
+    "lon": "geometry.x in EPSG:4326",
+    "elevation": "ELEVATION, feet above mean sea level",
+    "awcId": "ICAO_ID; AWC-specific KF70 and KL35 aliases; no mapping for L70 or L94",
+    "aliases": "FAA IDENT and original NAME when display expansion differs, plus AWC aliases"
+  },
+  "notes": [
+    "Service root metadata confirms Sep 3\u2013Oct 29, 2026 effective window. Layer metadata has an outdated 2021 description.",
+    "F70 is French Valley, serving Murrieta/Temecula.",
+    "ICAO_ID is null in FAA data for F70, L35, L70 and L94."
+  ]
+}
